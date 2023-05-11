@@ -10,7 +10,9 @@ import java.util.Optional;
 public class MemberService {
 
     private final MemberRepository memberRepository = new MemoryMemberRepository();
-
+    //ctrl + shift + t 로 테스트 코드 한번에 만들기 가능
+    
+    
     //회원가입
     public Long join(Member member) {
 
