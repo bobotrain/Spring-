@@ -1,9 +1,11 @@
 package com.example.hellospring.repository;
 
 import com.example.hellospring.domain.Member;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
+@Repository //for controller 인식 위해서
 public class MemoryMemberRepository implements MemberRepository {
     private static Map<Long, Member> store = new HashMap<>();
     private static long sequence = 0L;

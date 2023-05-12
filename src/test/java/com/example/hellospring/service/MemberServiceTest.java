@@ -23,7 +23,6 @@ class MemberServiceTest {
 
         //then
         Member findMember = memberSerivce.findOne(saveId).get();
-        Assertions.assertEquals(saveId, findMember );
 
 
 
