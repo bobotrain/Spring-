@@ -4,8 +4,11 @@ import com.example.hellospring.domain.Member;
 import com.example.hellospring.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+
+import java.util.List;
 
 @Controller
 public class MemberController {
@@ -42,5 +45,13 @@ public class MemberController {
         return "redirect:/";
     }
 
+    @GetMapping("/members/")
+    public String list(Model model) {
+        List<Member> members = memberService.findMembers();
+        //model이라는 리스트에 아예 members를 담어서 template에 넘길 꺼임
+        model.addAttribute( "members", members);
+        return "members/memberList";
+
+    }
 
 }
