@@ -45,7 +45,7 @@ public class MemberController {
         return "redirect:/";
     }
 
-    @GetMapping("/members/")
+    @GetMapping("/members")
     public String list(Model model) {
         List<Member> members = memberService.findMembers();
         //model이라는 리스트에 아예 members를 담어서 template에 넘길 꺼임
