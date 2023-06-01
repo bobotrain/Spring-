@@ -11,7 +11,9 @@ public class MemoryMemberRepository implements MemberRepository {
     private static long sequence = 0L;
     @Override
     public Member save(Member member) {
+        //여기서 id(번호)가 1씩 증가하는것
         member.setId(++sequence);
+        //정의해 놓은 store형태 잘 보기
         store.put(member.getId(), member);
         return member;
     }

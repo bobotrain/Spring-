@@ -11,6 +11,8 @@
             </tr>
             </thead>
             <tbody>
+            <!--MemberController 에서 model에 addAttribute 으로 담아뒀던 memberService에서
+            키 값 : member로 각각 원하는 값을 꺼내서 쓰면 됨.-->
             <tr th:each="member : ${members}">
                 <td th:text="${member.id}"></td>
                 <td th:text="${member.name}"></td>

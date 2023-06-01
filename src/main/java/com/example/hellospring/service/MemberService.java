@@ -20,8 +20,9 @@ public class MemberService {
 
         validateDuplicateMember(member); //중복 회원 검증
 
+        //save메서드를 살펴보면
         memberRepository.save(member);
-        return member.getId();   //회원가입하면 아이디만 반환해주겠다.
+        return member.getId();   //회원가입하면 아이디(번호)만 반환해주겠다.
 
 
 
@@ -41,6 +42,7 @@ public class MemberService {
 
     //전체회원조회 ( repository참고해서 변수타입 맞춰주기 : list<member> )
     public List<Member> findMembers() {
+        //MemberRepository의 list중 하나인 findAll 가져오기
         return memberRepository.findAll();
     }
 
