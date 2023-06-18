@@ -8,4 +8,4 @@ primary key (id)
 
 
 insert into member(name) values('spring');
-insert into member(name) values('spring2');
+insert into member(name) valu es('spring2');
